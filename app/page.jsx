@@ -77,7 +77,7 @@ function FlowVisual() {
             </div>
             <div className="rule-chip">
               <Icon name="send" size={12} stroke={2} />
-              <span>Rule: High intent → Hot leads</span>
+              <span>High intent → Hot leads</span>
             </div>
             <Icon name="down" size={14} stroke={2.2} className="connector-arrow" />
           </div>
