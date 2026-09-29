@@ -90,6 +90,8 @@ main { overflow-x: clip; } /* glows can spill wide; never let them cause sideway
 
 /* ── Hero ─────────────────────────────────────────────────────────────── */
 .hero { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 104px; gap: 26px; }
+/* keep hero copy and buttons above the glows that sit behind the dashboard */
+.hero > :not(.ambient):not(.stage) { position: relative; z-index: 1; }
 .ambient { position: absolute; top: -140px; left: 50%; width: 900px; height: 300px; transform: translateX(-50%); background: var(--accent); opacity: 0.1; filter: blur(140px); border-radius: 50%; pointer-events: none; }
 .announce { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px 5px 6px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-size: 14px; color: var(--t2); position: relative; }
 .announce .pill { background: var(--accent-soft); color: var(--accent-text); }
